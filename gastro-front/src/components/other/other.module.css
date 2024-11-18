@@ -1,0 +1,77 @@
+
+/*Чат*/
+
+.chat__container{
+    width: calc(var(--index) * 8);
+    height: calc(var(--index) * 10);
+    position: absolute;
+    z-index: 1000;
+    right: calc(var(--index) * 2);
+    bottom: calc(var(--index) * -1);
+}
+
+.chat__wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.chat__message{
+    border-radius: 11px;
+    box-shadow: 0px 0px 30px 0px rgba(86, 86, 86, 0.25);
+    font-weight: 400;
+    line-height: 133.8%;
+    font-size: calc(var(--index) * .55);
+    padding: calc(var(--index) * .2) calc(var(--index) * .6);
+    margin-bottom: calc(var(--index) * .7);
+}
+
+
+.chat__btn{
+    width: calc(var(--index) * 3);
+    height: calc(var(--index) * 3);
+    box-shadow: 0px 0px 30px 0px rgba(86, 86, 86, 0.25);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat__btn button{
+    background-color: transparent;
+    border: none;
+    color: rgb(2, 2, 2);
+    font-size: calc(var(--index) * 1.5);
+    cursor: pointer;
+}
+
+.chat__btn__counter{
+    font-size: calc(var(--index) * .6);
+    text-align: center;
+    color: rgb(245, 250, 255);
+    background-color: rgb(2, 2, 2);
+    border-radius: 50%;
+    width: calc(var(--index) * 1);
+    height: calc(var(--index) * 1);    
+    transform: translate(calc(var(--index) * 1), calc(var(--index) * -1.4));
+    position: absolute;
+}
+
+.chat__wu{
+    color: rgb(2, 2, 2);
+    font-size: calc(var(--index) * 1.5);
+    transform: translate(calc(var(--index) * -2.5), calc(var(--index) * -.5));  
+}
+
+.chat__tg{
+    color: rgb(2, 2, 2);
+    font-size: calc(var(--index) * 1.5);
+    transform: translate(calc(var(--index) * -.7), calc(var(--index) * -1.2));  
+}
+
+/*побочка*/
+
+.text__green{
+    color: rgb(100, 211, 112);
+}

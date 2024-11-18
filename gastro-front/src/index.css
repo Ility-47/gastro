@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+:root{
+  --index: calc(1vh + 1vw);
+}
+
+body{
+  background: rgb(245, 250, 255);
+  color: rgb(2, 2, 2);
+  font-family: Comfortaa;
+  font-size: calc(var(--index) * .9);
+  font-weight: 700;
+  line-height: 110%;
+  overflow-x: hidden;
+}
+
+.container{
+  margin: 0 auto;
+  width: 65vw;
+  height: 100vh;  
+  padding: calc(var(--index) * 8) 0;
+}
+
+/*Круги*/
+
+.ellipse-big{
+  width: calc(var(--index) * 20);
+  height: calc(var(--index) * 20);
+  border-radius: 50%;
+  background-color:  rgb(100, 211, 112);
+  transform: rotate(-19.06deg);
+  position: absolute;
+  top: calc(var(--index) * -10);
+  right: calc(var(--index) * -5);
+}
+
+.ellipse-border{
+  border-radius: 50%;
+  border: calc(var(--index) * 1) solid rgba(100, 211, 112, 0.5);
+  background-color:  transparent;
+
+}
+
+.ellipse-lg-container{
+  width: calc(var(--index) * 18);
+  height: calc(var(--index) * 16);
+  overflow: hidden;
+  position: absolute;
+  left: calc(var(--index) * 1);
+  bottom: calc(var(--index) * -12);
+}
+
+.ellipse-lg{
+  width: calc(var(--index) * 18);
+  height: calc(var(--index) * 18);
+}
+
+.ellipse-sm-container{
+  width: calc(var(--index) * 12);
+  height: calc(var(--index) * 6);
+  overflow: hidden;
+  position: absolute;
+  right: calc(var(--index) * 1);
+  bottom: calc(var(--index) * -12);
+}
+
+.ellipse-sm{
+  width: calc(var(--index) * 12);
+  height: calc(var(--index) * 12);
+}
