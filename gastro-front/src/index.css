@@ -7,6 +7,9 @@
 
 :root{
   --index: calc(1vh + 1vw);
+  --color-w: rgb(245, 250, 255);
+  --color-b: rgb(2, 2, 2);
+  --color-g: rgb(100, 211, 112);
 }
 
 body{
@@ -17,6 +20,12 @@ body{
   font-weight: 700;
   line-height: 110%;
   overflow-x: hidden;
+}
+
+button{
+  border: none;
+  border-radius: 25px;
+  background: transparent;
 }
 
 .container{

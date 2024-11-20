@@ -1,28 +1,5 @@
 import s from './shop.module.css'
-import Chat from '../other/other'
-
-const EllipseBig = () =>{
-  return(
-    <div className="ellipse-big"></div>
-  )
-}
-
-const EllipseLg = () =>{
-  return(
-    <div className='ellipse-lg-container'>
-      <div className="ellipse-border ellipse-lg"></div>
-    </div>
-  )
-}
-
-const EllipseSm = () =>{
-  return(
-    <div className='ellipse-sm-container'>
-      <div className="ellipse-border ellipse-sm"></div>
-    </div>
-  )
-}
-
+import { Chat, EllipseLg, EllipseBig, EllipseSm  } from '../other/other'
 const ShopItem = ({name, picture}) =>{
   return(
       <div className={s.item}>
@@ -40,13 +17,15 @@ const Shop = () =>{
   let picture1 = "./sweet.webp",
       picture2 = "./granala.webp"
     return(
-        <div className={s.wrapper}>
-            <EllipseBig/>
-            <EllipseLg/>
-            <EllipseSm/> 
-            <Chat />
-            <ShopItem name={"Полезные конфеты"} picture={picture1}/>
-            <ShopItem name={"Гранала"} picture={picture1}/>
+        <div className='container'>
+          <div className={s.wrapper}>
+              <EllipseBig/>
+              <EllipseLg/>
+              <EllipseSm/> 
+              <Chat />
+              <ShopItem name={"Полезные конфеты"} picture={picture1}/>
+              <ShopItem name={"Гранала"} picture={picture1}/>
+          </div>
         </div>
     )
 }

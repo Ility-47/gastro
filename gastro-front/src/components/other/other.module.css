@@ -75,3 +75,17 @@
 .text__green{
     color: rgb(100, 211, 112);
 }
+
+/*Кнопка "Оформить заказ"*/
+
+.zakazBtn{
+    color: var(--color-w);
+    background-color: var(--color-g);
+    padding: calc(var(--index) * .2) calc(var(--index) * .6);
+    font-size: calc(var(--index) * 1.05);
+    font-weight: 500;
+    line-height: 133.8%;
+    letter-spacing: 2.5%;
+    text-align: center;
+    margin: calc(var(--index) * 1.5) 0;
+}

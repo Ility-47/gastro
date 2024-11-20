@@ -1,14 +1,36 @@
 import { useState } from 'react'
 import s from './other.module.css'
 
-const Chat = () => {
+export const EllipseBig = () =>{
+    return(
+      <div className="ellipse-big"></div>
+    )
+  }
+  
+export const EllipseLg = () =>{
+    return(
+      <div className='ellipse-lg-container'>
+        <div className="ellipse-border ellipse-lg"></div>
+      </div>
+    )
+  }
+  
+export const EllipseSm = () =>{
+    return(
+      <div className='ellipse-sm-container'>
+        <div className="ellipse-border ellipse-sm"></div>
+      </div>
+    )
+  }
+
+export const Chat = ({customClassName}) => {
     const [counter, setCounter] = useState(0)
     const handleCounter = () => {
         setCounter(counter + 1)
     }
 
     return (
-        <div className={s.chat__container}>
+        <div className={customClassName ? customClassName : s.chat__container}>
             <div className={s.chat__wrapper}>
                 <div className={s.chat__message}>
                    <span className={s.text__green}>Мы онлайн!</span> Консультация
@@ -29,4 +51,8 @@ const Chat = () => {
     )
 }
 
-export default Chat
+export const ZakazBtn = () =>{
+  return(
+    <button className={s.zakazBtn}>Оформить заказ</button>
+  )
+}

@@ -19,7 +19,6 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <div className="container">
           <Routes>
             <Route path='/Program' element={<Program/>}/>
             <Route path='/Lanch' element={<Lanch/>}/>
@@ -27,7 +26,6 @@ function App() {
             <Route path='/About' element={<About/>}/>
             <Route path='/Blog' element={<Blog/>}/>
           </Routes>
-        </div>
         <Footer />
       </BrowserRouter>
     </>

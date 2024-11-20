@@ -28,6 +28,7 @@
     position: relative;
     z-index: 1000;
     font-size: calc(var(--index) * .6);
+    background: rgb(245, 250, 255);
 }
 
 .header__logo img{
