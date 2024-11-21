@@ -73,4 +73,14 @@ let shop = [
     },
 ]
 
+export let blog = [
+    {
+        id:0,
+        image: './blog1.png',
+        title: "Как поменять свои пищевые привычки",
+        date: "29.05.2020",
+
+    }
+]
+
 export default shop

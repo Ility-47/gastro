@@ -56,7 +56,7 @@
 
 .containerCards{
     width: 65vw;
-    margin: 0 auto;
+    margin: 0 auto calc(var(--index) * 3);
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -127,3 +127,20 @@
     }
 }
 
+/*Слайдер*/
+
+.containerSlider{
+    width: 100vw;
+    &__title{
+        text-align: center;
+        font-size: calc(var(--index) * 1.5);
+        font-weight: 700;
+        line-height: 120%;
+    }
+    .slider{
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none;
+        margin: calc(var(--index) * 1) 0;
+    }
+}

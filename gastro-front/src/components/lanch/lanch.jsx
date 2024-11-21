@@ -98,7 +98,31 @@ const Lanch = () => {
                     <LanchCard card={item} key={key} />
                 ))}
             </div>
-
+        </div>
+        <div className={s.containerSlider}>
+            <h4 className={s.containerSlider__title}>
+                Фото блюд
+            </h4>
+            <div className={s.slider}>
+                <div className={s.slider__item}>
+                    <img src="./slider0.png" alt="" />
+                </div>
+                <div className={s.slider__item}>
+                    <img src="./slider1.png" alt="" />
+                </div>
+                <div className={s.slider__item}>
+                    <img src="./slider2.png" alt="" />
+                </div>
+                <div className={s.slider__item}>
+                    <img src="./slider3.png" alt="" />
+                </div>
+                <div className={s.slider__item}>
+                    <img src="./slider4.png" alt="" />
+                </div>
+                <div className={s.slider__item}>
+                    <img src="./slider5.png" alt="" />
+                </div>
+            </div>    
         </div>
         </>
     )
