@@ -36,6 +36,43 @@
     img{
         width: 100%;
     }
+    &__wrapper{
+        padding: 0 calc(var(--index) * 1);
+        
+    }
+    &__info{
+        @include f-center-betwen();
+        margin-top: calc(var(--index) * .5);
+        &__date{
+            color: rgb(181, 194, 206);
+            font-size: calc(var(--index) * .6);
+            font-weight: 500;
+            line-height: 133.8%;
+            letter-spacing: 2.5%;
+        }
+        &__btn{
+                color: rgb(181, 194, 206);
+                font-size: calc(var(--index) * .6);
+                font-weight: 500;
+                line-height: 133.8%;
+                letter-spacing: 2.5%;
+                text-decoration: none;
+                border: 1px solid rgb(181, 194, 206);
+                border-radius: 25px;
+                padding:calc(var(--index) * .2) calc(var(--index) * .6);
+                display: flex;
+                align-items: center;
+                transition: .4s;
+            i{
+                margin-left: 3px;
+            }
+        }    
+            
+        &__btn:hover{
+                color: rgb(100, 211, 112);
+                border: 1px solid rgb(100, 211, 112);
+        }
+    }
 }
 
 /*Основной код*/
@@ -46,4 +83,45 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: calc(var(--index) * 1);
     margin: calc(var(--index) * 1.5) 0;
+}
+
+/*Внутренняя страница*/
+
+/*Кнопка назад*/
+
+.back__btn{
+    width: calc(var(--index) * 1);
+    height: calc(var(--index) * 1);
+    border-radius: 50%;
+    color: var(--color-b);
+    background-color: var(--color-grey);
+    cursor: pointer;
+}
+
+/*Секция main*/
+
+main{
+    width: 100%;
+    margin: calc(var(--index) * 5) 0;
+    img{
+        width: 100%;
+    }
+    .main__wrapper{
+        @include f-center-betwen();
+        padding: 0 calc(var(--index) * 1);
+    }
+    .main__title{
+        @include f-center-betwen();
+        width: 50%;
+    }
+    .main__links{
+        @include f-center-betwen();
+        a{
+            cursor: pointer;
+            margin-left: calc(var(--index) * .5);
+            i{
+                color: var(--color-b);
+            }
+        }
+    }
 }

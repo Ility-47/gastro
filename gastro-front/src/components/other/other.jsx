@@ -21,8 +21,15 @@ export const EllipseSm = () =>{
         <div className="ellipse-border ellipse-sm"></div>
       </div>
     )
-  }
+}
 
+export const EllipseSmP = () =>{
+  return(
+    <div className='ellipse-sm-container-p'>
+      <div className="ellipse-sm-p"></div>
+    </div>
+  )
+}
 export const Chat = ({customClassName}) => {
     const [counter, setCounter] = useState(0)
     const handleCounter = () => {

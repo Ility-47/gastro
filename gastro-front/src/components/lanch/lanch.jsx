@@ -1,6 +1,6 @@
 import s from './lanch.module.scss'
 import { EllipseBig, ZakazBtn, Chat } from '../other/other'
-import shop from '../../state'
+import { shop } from '../../state.js'
 import { useState } from 'react'
 
 const LanchCard = ({card}) =>{

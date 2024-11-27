@@ -6,6 +6,7 @@ import Footer from './components/footer/footer'
 import Header from './components/header/header'
 import About from './components/about/about'
 import Blog from './components/blog/blog'
+import BlogPage from './components/blog/blogSpec'
 import Lanch from './components/lanch/lanch'
 import Program from './components/program/program'
 import Shop from './components/shop/shop'
@@ -25,6 +26,7 @@ function App() {
             <Route path='/Shop' element={<Shop/>}/>
             <Route path='/About' element={<About/>}/>
             <Route path='/Blog' element={<Blog/>}/>
+            <Route path='/BlogPage/:id' element={<BlogPage/>}/>
           </Routes>
         <Footer />
       </BrowserRouter>
