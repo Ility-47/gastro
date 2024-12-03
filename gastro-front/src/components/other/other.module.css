@@ -1,13 +1,29 @@
 
 /*Чат*/
 
+/*Кастомки чата*/
+
+.lanch__chat{
+    width: calc(var(--index) * 8);
+    height: calc(var(--index) * 10);
+    position: absolute;
+    z-index: 1000;
+    right: calc(var(--index) * 2);
+    bottom: calc(var(--index) * -15);
+}
+
+
+/*Стили чата*/
+
+
 .chat__container{
     width: calc(var(--index) * 8);
     height: calc(var(--index) * 10);
     position: absolute;
     z-index: 1000;
     right: calc(var(--index) * 2);
-    bottom: calc(var(--index) * -1);
+    /* bottom: calc(var(--index) * -1); */
+    top: 70vh;
 }
 
 .chat__wrapper{

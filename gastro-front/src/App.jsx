@@ -10,6 +10,8 @@ import BlogPage from './components/blog/blogSpec'
 import Lanch from './components/lanch/lanch'
 import Program from './components/program/program'
 import Shop from './components/shop/shop'
+import ShopItem from './components/shop/shopItem'
+
 import {
   Route,
   BrowserRouter,
@@ -27,6 +29,7 @@ function App() {
             <Route path='/About' element={<About/>}/>
             <Route path='/Blog' element={<Blog/>}/>
             <Route path='/BlogPage/:id' element={<BlogPage/>}/>
+            <Route path='/ShopItem' element={<ShopItem/>}/>
           </Routes>
         <Footer />
       </BrowserRouter>

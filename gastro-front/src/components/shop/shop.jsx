@@ -1,12 +1,14 @@
-import s from './shop.module.css'
+import s from './shop.module.scss'
 import { Chat, EllipseLg, EllipseBig, EllipseSm  } from '../other/other'
+import { Link } from 'react-router-dom'
 const ShopItem = ({name, picture}) =>{
   return(
       <div className={s.item}>
         <img src={picture} alt="" />
         <div className={s.item__info}>
           <h3 className={s.item__info__title}>{name}</h3>
-          <a href="">Ассортимент<i className="fa-solid fa-angle-right"></i></a>
+          
+          <Link to={`/ShopItem`}>Ассортимент<i className="fa-solid fa-angle-right"></i></Link>
         </div>
       </div>
   )

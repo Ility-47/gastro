@@ -7,9 +7,9 @@ export const EllipseBig = () =>{
     )
   }
   
-export const EllipseLg = () =>{
+export const EllipseLg = ({customClassName}) =>{
     return(
-      <div className='ellipse-lg-container'>
+      <div className={customClassName ? customClassName : 'ellipse-lg-container'}>
         <div className="ellipse-border ellipse-lg"></div>
       </div>
     )

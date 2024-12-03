@@ -9,7 +9,7 @@ export let shop = [
             '2. Рис жареный с курицей', 
             '3. Салат овощной с базиликово-медовой заправкой'],
         price: 189,
-        image: './card1.webp'
+        image: '/card1.webp'
     },
     {
         id: 1,
@@ -21,7 +21,7 @@ export let shop = [
         '2. Рис жареный с курицей', 
         '3. Салат овощной с базиликово-медовой заправкой'],
         price: 189,
-        image: './card2.webp'
+        image: '/card2.webp'
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ export let shop = [
             '2. Рис жареный с курицей', 
             '3. Салат овощной с базиликово-медовой заправкой'],
         price: 189,
-        image: './card1.webp'
+        image: '/card1.webp'
     },
     {
         id: 3,
@@ -45,7 +45,7 @@ export let shop = [
             '2. Рис жареный с курицей', 
             '3. Салат овощной с базиликово-медовой заправкой'],
         price: 189,
-        image: './card2.webp'
+        image: '/card2.webp'
     },
     {
         id: 4,
@@ -57,7 +57,7 @@ export let shop = [
             '2. Рис жареный с курицей', 
             '3. Салат овощной с базиликово-медовой заправкой'],
         price: 189,
-        image: './card1.webp'
+        image: '/card1.webp'
     },
     {
         id: 5,
@@ -69,67 +69,119 @@ export let shop = [
             '2. Рис жареный с курицей', 
             '3. Салат овощной с базиликово-медовой заправкой'],
         price: 189,
-        image: './card2.webp'
+        image: '/card2.webp'
+    },
+]
+
+export let shopItem = [
+    {
+        id: 0,
+        title: 'Имбирные конфеты с апельсином',
+        compound: 'Состав: Подсушенный миндаль, медовые финики, пряный имбирь, апельсин, миндальные лепестки. Не содержат сахара!',
+        protein: 8,
+        fats: 20,
+        carbh: 36,
+        ccal: 346,
+        price: 150,
+    },
+    {
+        id: 1,
+        title: 'Имбирные конфеты с апельсином',
+        compound: 'Состав: Подсушенный миндаль, медовые финики, пряный имбирь, апельсин, миндальные лепестки. Не содержат сахара!',
+        protein: 8,
+        fats: 20,
+        carbh: 36,
+        ccal: 346,
+        price: 150,
+    },
+    {
+        id: 2,
+        title: 'Имбирные конфеты с апельсином',
+        compound: 'Состав: Подсушенный миндаль, медовые финики, пряный имбирь, апельсин, миндальные лепестки. Не содержат сахара!',
+        protein: 8,
+        fats: 20,
+        carbh: 36,
+        ccal: 346,
+        price: 150,
+    },
+    {
+        id: 3,
+        title: 'Имбирные конфеты с апельсином',
+        compound: 'Состав: Подсушенный миндаль, медовые финики, пряный имбирь, апельсин, миндальные лепестки. Не содержат сахара!',
+        protein: 8,
+        fats: 20,
+        carbh: 36,
+        ccal: 346,
+        price: 150,
     },
 ]
 
 export let blog = [
     {
         id:0,
-        image: './blog1.png',
+        image: '/blog1.png',
         title: "Как поменять свои пищевые привычки",
         date: "29.05.2020",
+        images:['/blog1_0.png', '/blog1_1.png', '/blog1_2.png']
 
     },
     {
         id:1,
-        image: './blog2.png',
+        image: '/blog2.png',
         title: "Как поменять свои пищевые привычки",
         date: "29.05.2020",
+         images:['/blog1_0.png', '/blog1_1.png', '/blog1_2.png']
     },
     {
         id:2,
-        image: './blog3.png',
+        image: '/blog3.png',
         title: "Как поменять свои пищевые привычки",
         date: "29.05.2020",
+         images:['/blog1_0.png', '/blog1_1.png', '/blog1_2.png']
     },
     {
         id:3,
-        image: './blog1.png',
+        image: '/blog1.png',
         title: "Как поменять свои пищевые привычки",
         date: "29.05.2020",
+         images:['/blog1_0.png', '/blog1_1.png', '/blog1_2.png']
 
     },
     {
         id:4,
-        image: './blog2.png',
+        image: '/blog2.png',
         title: "Как поменять свои пищевые привычки",
         date: "29.05.2020",
+         images:['/blog1_0.png', '/blog1_1.png', '/blog1_2.png']
     },
     {
         id:5,
-        image: './blog3.png',
+        image: '/blog3.png',
         title: "Как поменять свои пищевые привычки",
         date: "29.05.2020",
+         images:['/blog1_0.png', '/blog1_1.png', '/blog1_2.png']
     },
     {
         id:6,
-        image: './blog1.png',
+        image: '/blog1.png',
         title: "Как поменять свои пищевые привычки",
         date: "29.05.2020",
+         images:['/blog1_0.png', '/blog1_1.png', '/blog1_2.png']
 
     },
     {
         id:7,
-        image: './blog2.png',
+        image: '/blog2.png',
         title: "Как поменять свои пищевые привычки",
         date: "29.05.2020",
+         images:['/blog1_0.png', '/blog1_1.png', '/blog1_2.png']
     },
     {
         id:8,
-        image: './blog3.png',
+        image: '/blog3.png',
         title: "Как поменять свои пищевые привычки",
         date: "29.05.2020",
+         images:['/blog1_0.png', '/blog1_1.png', '/blog1_2.png']
     },
     
 ]

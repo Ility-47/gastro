@@ -52,6 +52,7 @@ button{
   position: absolute;
   top: calc(var(--index) * -10);
   right: calc(var(--index) * -5);
+  z-index: 100;
 }
 
 .ellipse-border{
@@ -103,4 +104,17 @@ button{
   height: calc(var(--index) * 12);
   border-radius: 50%;
   background-color: rgba(100, 211, 112, 0.5);
+}
+
+/*Для универсальных компонент*/
+
+.universal__btn{
+    width:fit-content;
+    border-radius: 25px;
+    color: var(--color-w);
+    background-color: var(--color-g);
+    cursor: pointer;
+    padding: calc(var(--index) * .2) calc(var(--index) * .6);
+    font-size: calc(var(--index) * 1);
+
 }

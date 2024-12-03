@@ -4,6 +4,16 @@
     justify-content: space-between;
 }
 
+/*Для круга*/
+
+.blog__ellipse__lg{
+    left: calc(var(--index) * -5);
+    width: calc(var(--index) * 18);
+    height: calc(var(--index) * 18);
+    overflow: hidden;
+    position: absolute;
+    bottom: calc(var(--index) * -11);
+}
 
 /* Пагинация */
 
@@ -102,19 +112,36 @@
 
 main{
     width: 100%;
-    margin: calc(var(--index) * 5) 0;
+    padding: calc(var(--index) * 5) 0 calc(var(--index) * 1) 0;
     img{
         width: 100%;
     }
     .main__wrapper{
         @include f-center-betwen();
         padding: 0 calc(var(--index) * 1);
+        &__back__btn{
+            width: 20%;
+            display: flex;
+            align-items: center;
+            button{
+                margin-right: 10px;
+            }
+        }
+        &__bottom{
+            margin: calc(var(--index) * 3) 0;
+        }
     }
     .main__title{
         @include f-center-betwen();
         width: 50%;
+        &__date{
+            color: var(--color-grey-t);
+            font-size: calc(var(--index) * .5);
+
+        }
     }
     .main__links{
+        width: 20%;
         @include f-center-betwen();
         a{
             cursor: pointer;
@@ -124,4 +151,43 @@ main{
             }
         }
     }
+    article{
+        width: 90%;
+        margin: 0 auto;
+        .custom__p{
+            margin-bottom: calc(var(--index) * 1);
+            font-size: calc(var(--index) * .8);
+            font-weight: 400;
+            line-height: 120%;
+            text-align: justify;
+        }
+        img{
+            width: 100%;
+            margin: calc(var(--index) * 1) 0 calc(var(--index) * 2) 0;
+        }
+    }
+    .main__to__program{
+        width:fit-content;
+        border-radius: 25px;
+        color: var(--color-w);
+        background-color: var(--color-g);
+        cursor: pointer;
+        padding: calc(var(--index) * .2) calc(var(--index) * .6);
+        font-size: calc(var(--index) * 1);
+    }
 }
+
+.maybe{
+    width: 100%;
+    &__title{
+        font-size: calc(var(--index) *.9);
+        font-weight: 700;
+        line-height: 120%;
+        text-align: center;
+    }
+    &__wrapper{
+        @include f-center-betwen();
+        padding: calc(var(--index) * 1) 0 calc(var(--index) * 2) 0;
+    }
+}
+

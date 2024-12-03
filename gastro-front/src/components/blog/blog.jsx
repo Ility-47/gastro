@@ -1,9 +1,9 @@
 import s from './blog.module.scss'
-import { EllipseBig, EllipseLg, EllipseSmP } from '../other/other'
+import { Chat, EllipseBig, EllipseLg, EllipseSmP } from '../other/other'
 import { blog } from '../../state.js'
 import { Link } from 'react-router-dom'
 
-const BlogItem = ({item}) =>{
+export const BlogItem = ({item}) =>{
   return(
     <div className={s.item}>
       <img src={item.image} alt="" />      
@@ -37,6 +37,7 @@ const Blog = () =>{
         <EllipseSmP />
         <EllipseLg />
         <EllipseBig />
+        <Chat />
         <div className="container blog__container">
             <BlogPagination />
             <div className={s.blog__wrapper}>
