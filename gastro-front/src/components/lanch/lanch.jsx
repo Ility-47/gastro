@@ -62,7 +62,7 @@ export const SectionSlider = () => {
     )
 }
 
-const LanchCard = ({ card }) => {
+export const PriceCounter = ({price}) => {
     const [counter, setCounter] = useState(1)
     const [isActive, setActive] = useState(true)
     const [portion, setPortion] = useState('порция')
@@ -94,29 +94,37 @@ const LanchCard = ({ card }) => {
             handlePortion(counter - 1)
         }
     }
+ 
+    return (
+        <div className={s.card__added}>
+            <div className={s.card__btns}>
+                <button className={isActive ? s.card__btn : s.card__btn + ' ' + s.card__btn__active} onClick={counterMinuse}>-</button>
+                <div className={s.card__counter}>{counter}</div>
+                <button className={s.card__btn} onClick={counterPluse}>+</button>
+            </div>
+            <div className={s.card__added__info}>
+                {counter} {portion} \ {price * counter} руб
+            </div>
+        </div>
+    )
+}
 
+const LanchCard = ({ card }) => {  
     return (
         <div className={s.card}>
             <img src={card.image} alt="" />
-            <div className={s.card__info}>
-                <div className={s.card__info__wrapper}>
-                    <h3 className={s.card__info__title}>{card.title}</h3>
-                    <h5 className={s.card__info__wrapper__text}>{card.weight}г</h5>
-                    <h5 className={s.card__info__wrapper__text}>{card.ccal}ккал</h5>
+            <div className={s.card__wrapper}>
+                <div className={s.card__info}>
+                    <div className={s.card__info__wrapper}>
+                        <h3 className={s.card__info__title}>{card.title}</h3>
+                        <h5 className={s.card__info__wrapper__text}>{card.weight}г</h5>
+                        <h5 className={s.card__info__wrapper__text}>{card.ccal}ккал</h5>
+                    </div>
+                    <div className={s.card__info__compound}>{card.compound.map((item, key) => (
+                        <p key={key}>{item}</p>
+                    ))}</div>
                 </div>
-                <div className={s.card__info__compound}>{card.compound.map((item, key) => (
-                    <p key={key}>{item}</p>
-                ))}</div>
-            </div>
-            <div className={s.card__added}>
-                <div className={s.card__btns}>
-                    <button className={isActive ? s.card__btn : s.card__btn + ' ' + s.card__btn__active} onClick={counterMinuse}>-</button>
-                    <div className={s.card__counter}>{counter}</div>
-                    <button className={s.card__btn} onClick={counterPluse}>+</button>
-                </div>
-                <div className={s.card__added__info}>
-                    {counter} {portion} \ {card.price * counter} руб
-                </div>
+                <PriceCounter price={card.price}/>
             </div>
         </div>
     )

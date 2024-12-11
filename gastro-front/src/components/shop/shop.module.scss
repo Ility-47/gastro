@@ -75,6 +75,46 @@
     bottom: calc(var(--index) * -10);
 }
 
+.shopItem__cards{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: calc(var(--index) * 1);
+    margin-bottom: calc(var(--index) * 5);
+    
+}
+
+/*Карточка товара*/
+
+.card{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+    &__wrapper{
+        padding: 0 calc(var(--index) * 1);
+        font-weight: 700;
+    }
+    &__title{
+        font-size: calc(var(--index) * .8);
+        line-height: 180%;
+    }
+    &__compound{
+        font-size: calc(var(--index) * .6);
+        font-weight: 500;
+        line-height: 133.8%;
+        letter-spacing: 2.5%;
+        text-align: justify;
+        padding: calc(var(--index) * .5) 0;
+    }
+    &__bju{
+        width: 100%;
+        @include f-center-between();
+        font-size: calc(var(--index) * .8);
+    }
+}
+
+
 /*Адаптив*/
 @media (max-width: 540px) {
     .wrapper{

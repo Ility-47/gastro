@@ -1,7 +1,27 @@
 import s from './shop.module.scss'
-import { DarkSectionLanch_Shop, SectionSlider } from "../lanch/lanch"
+import { DarkSectionLanch_Shop, PriceCounter, SectionSlider } from "../lanch/lanch"
 import { BackBtn } from "../blog/blogSpec"
 import { Chat } from '../other/other'
+import { shopItem } from '../../state'
+
+const ShopCard = ({item}) =>{
+    return(
+        <div className={s.card}>
+            <img src={item.image} alt="" />
+            <div className={s.card__wrapper}>        
+                <h4 className={s.card__title}>{item.title}</h4>
+                <div className={s.card__compound}>{item.compound}</div>
+                <div className={s.card__bju}>
+                    <div className={s.card__bju__protein}>Белки - {item.protein}</div>
+                    <div className={s.card__bju__fats}>Жиры - {item.fats}</div>
+                    <div className={s.card__bju__carbh}>Углеводы - {item.carbh}</div>
+                    <div className={s.card__bju__ccal}>Ккал - {item.ccal}</div>
+                </div>
+                <PriceCounter price={item.price}/>
+            </div>
+        </div>
+    )
+}
 
  const ShopItem = () =>{
     return(
@@ -19,7 +39,9 @@ import { Chat } from '../other/other'
                     </button>
                 </div>
                 <div className={s.shopItem__cards}>
-                    {}
+                    {shopItem.map((item, key) => (
+                        <ShopCard item={item} />
+                    ))}
                 </div>
             </div>
             <SectionSlider />

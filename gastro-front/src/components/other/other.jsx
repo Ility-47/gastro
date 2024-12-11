@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import s from './other.module.css'
 
+export const EllipseVeryBig = () =>{
+  return(
+    <div className="ellipse-verybig"></div>
+  )
+}
+
+
 export const EllipseBig = () =>{
     return(
       <div className="ellipse-big"></div>

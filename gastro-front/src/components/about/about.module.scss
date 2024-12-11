@@ -1,0 +1,80 @@
+@mixin f-center-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Секция с мужиком*/
+
+.owner{
+    width: 90vw;
+    padding: calc(var(--index) * 4) calc(var(--index) * 3);
+    margin-left:auto;
+    @include f-center-between();
+    &__text{
+        width: 40%;
+        font-size: calc(var(--index) * .8);
+        font-weight: 700;
+        line-height: 110%;
+        &__title{
+            font-size: calc(var(--index) * 1.3);
+            line-height: 120%;
+            letter-spacing: 2.5%;
+        }
+        &__subtitle{
+            p{
+                margin: calc(var(--index) * 1) 0;
+                font-weight: 300;
+            }
+        }
+    }
+    .image{
+        position: relative;
+        z-index: 1000;
+        background-image: url('./owner.png');
+        background-position: center;
+        background-size: cover;
+        width: calc(var(--index) * 20);
+        height: calc(var(--index) * 20);
+        border-radius: 50%;
+        border: calc(var(--index) * 1) solid var(--color-w);
+    }
+}
+
+.story{
+    width: 80vw;
+    padding: calc(var(--index) * 2) 0;
+    @include f-center-between(); 
+    img{
+        width: 50%;
+    }
+}
+
+.team{
+    width: 100%;
+    background-image: url('./team.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+
+.easy{
+    width: 80%;
+    padding: calc(var(--index) * 4) 0;
+    margin-left: auto;
+    @include f-center-between();
+    img{
+        width: 55%;
+    }
+    &__title{
+        margin: calc(var(--index) * .4) 0;
+    }
+    &__wrapper__links{
+        display: flex;
+        align-items: center;
+        i{
+            margin: 0 calc(var(--index) * .5);
+        }
+    }
+}

@@ -43,6 +43,18 @@ button{
 
 /*Круги*/
 
+.ellipse-verybig{
+  width: calc(var(--index) * 35);
+  height: calc(var(--index) * 35);
+  border-radius: 50%;
+  background-color:  rgb(100, 211, 112);
+  transform: rotate(-19.06deg);
+  position: absolute;
+  top: calc(var(--index) * -7);
+  right: calc(var(--index) * -5);
+  z-index: 100;  
+}
+
 .ellipse-big{
   width: calc(var(--index) * 20);
   height: calc(var(--index) * 20);
