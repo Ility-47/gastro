@@ -136,7 +136,7 @@ const Lanch = () => {
             <EllipseBig />
             <DarkSectionLanch_Shop title={`Бизнес-ланчи`} />
             <div className={s.containerCards}>
-                <ZakazBtn />
+                <ZakazBtn text={"Заказать онлайн"} />
                 <div className={s.cards__wrapper}>
                     {shop.map((item, key) => (
                         <LanchCard card={item} key={key} />

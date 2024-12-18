@@ -95,6 +95,7 @@
 /*Кнопка "Оформить заказ"*/
 
 .zakazBtn{
+    width: fit-content;
     color: var(--color-w);
     background-color: var(--color-g);
     padding: calc(var(--index) * .2) calc(var(--index) * .6);
@@ -103,5 +104,4 @@
     line-height: 133.8%;
     letter-spacing: 2.5%;
     text-align: center;
-    margin: calc(var(--index) * 1.5) 0;
 }

@@ -65,8 +65,8 @@ export const Chat = ({customClassName}) => {
     )
 }
 
-export const ZakazBtn = () =>{
+export const ZakazBtn = ({text, customClass}) =>{
   return(
-    <button className={s.zakazBtn}>Оформить заказ</button>
+    <button className={customClass? s.zakazBtn + ' ' + customClass : s.zakazBtn}>{text}</button>
   )
 }

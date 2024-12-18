@@ -57,6 +57,7 @@
 .containerCards{
     width: 65vw;
     margin: 0 auto calc(var(--index) * 3);
+    padding: calc(var(--index) * 1.5) 0;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -67,6 +68,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: calc(var(--index) * 1);
+    margin-top: calc(var(--index) * 1.5) ;
 }
 
 .card{
