@@ -1,6 +1,9 @@
 import { EllipseVeryBig, ZakazBtn } from '../other/other'
 import { SectionSlider } from "../lanch/lanch"
+import { questions } from '../../state'
+
 import s from './about.module.scss'
+
 
 const OrderForm = () => {
   return (
@@ -12,19 +15,19 @@ const OrderForm = () => {
       </h4>
       <form action="">
         <div className={s.form__wrapper}>
-          <label htmlFor="">Имя</label>
+          <label htmlFor="" className={s.form__label__text}>Имя</label>
           <input type="text" placeholder='Иван' />
         </div>
         <div className={s.form__wrapper}>
-          <label htmlFor="">Номер телефона</label>
-          <input type='phone' />
+          <label htmlFor="" className={s.form__label__text}>Номер телефона</label>
+          <input type='text' />
         </div>
         <div className={s.form__wrapper__radio}>
-          <input type='radio' />
+          <input type='checkbox' />
           <label htmlFor="">Тест-день! Получить скидку -30%?</label>
         </div>
         <div className={s.form__wrapper__radio}>
-          <input type='radio' />
+          <input type='checkbox' />
           <label htmlFor="">Согласен с <span style={{ color: `var(--color-g)` }}> условиями сотрудничества</span></label>
         </div>
         <div className={s.form__btn__wrapper}>
@@ -34,6 +37,31 @@ const OrderForm = () => {
         </div>
 
       </form>
+    </div>
+  )
+}
+
+const AccordeonItem = ({item}) =>{
+  return(
+    <details>
+      <summary>
+        {item.title} <span><i className="fa-solid fa-angle-right"></i></span> 
+      </summary>
+      <div className={s.details__content}>
+        {item.text}
+      </div>
+    </details>
+
+  )
+}
+
+const AccordeonsBLock = () =>{
+  return(
+    <div className={s.accordeons}>
+      <h3 className={s.accordeons__title}>Часто задаваемые вопросы</h3>
+      {questions.map((item, key) => (
+        <AccordeonItem item={item} key={key} />        
+      ))}
     </div>
   )
 }
@@ -119,6 +147,7 @@ const About = () => {
       <SectionSlider />
       <section className={s.formAccordeon}>
         <OrderForm />
+        <AccordeonsBLock />
       </section>
     </>
   )
