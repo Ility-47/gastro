@@ -29,6 +29,7 @@ button{
   border: none;
   border-radius: 25px;
   background: transparent;
+  cursor: pointer;
 }
 
 .container{

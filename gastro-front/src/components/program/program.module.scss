@@ -1,0 +1,275 @@
+@mixin f-center-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Стили отдельного слайда*/
+
+.slide{
+    flex-shrink: 0; /* Не позволяет слайдам сжиматься */
+    width: 100%; 
+    position: relative;
+    z-index: 1000;
+    padding: 0 calc(var(--index) * 3) 0 calc(var(--index) * 12);
+    margin: calc(var(--index) * 4) 0 calc(var(--index) * 1) 0;
+    @include f-center-between();
+    &__info{
+        width: 40%;
+        font-weight: 400;
+        font-size: calc(var(--index) * 1);
+        line-height: 130%;
+        &__title{
+            font-weight: 700;
+            font-size: calc(var(--index) * 2);
+            line-height: 120%;
+            letter-spacing: 2.5%;
+        }
+        &__subtitle{
+            margin-top: calc(var(--index) * .5);
+        }
+        &__wrapper{
+            margin-top: calc(var(--index) * 1);
+            @include f-center-between();
+            &__btn{
+                width: 40%;
+            }
+            span{
+                font-size: calc(var(--index) * 1.5);
+                font-weight: 700;
+                line-height: 100%;                
+            }
+        }
+    }
+    &__image{
+        width: 40%;
+        text-align: center;
+        img{
+            position: relative;
+            z-index: 1000;
+            width: calc(var(--index) * 20);
+            height: calc(var(--index) * 20);
+            border-radius: 50%;
+            border: calc(var(--index) * 1) solid var(--color-w);
+        }
+    }
+}
+
+.slider{
+    width: 100vw;
+    position: relative;
+    margin-left:auto;
+    @include f-center-between();
+}
+
+.controls{
+    width: 10%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button{
+        font-size: calc(var(--index) * 1);
+        color: var(--color-g);
+        border-radius: 50%;
+        width: calc(var(--index) * 1);
+        height: calc(var(--index) * 1);
+        transition: .3s;
+    }
+    button:hover{
+        background-color: var(--color-g);
+        color: var(--color-w);
+    }
+    button:active{
+        outline: none;
+    }
+    button:focus{
+        outline: none;
+    }
+}
+
+/*Финтифлюшки какие-то хз как назвать*/
+
+.advantages{
+    border-radius: 30px;
+    background: rgba(229, 237, 244, 0.5);   
+    width: 65vw;
+    display: flex;
+    justify-content: space-between;
+    margin: calc(var(--index) * 4) auto;
+    padding: calc(var(--index) * 1) calc(var(--index) * 1.5);
+}
+
+.advantage{
+    display: block;
+    text-align: center;
+    width: 15%;
+    font-size: calc(var(--index) * .6);
+    font-weight: 500;
+    line-height: 130.22%;
+}
+
+/*Секция с калькулятором*/
+
+.calculate{
+    width: 65vw;
+    margin: auto;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;  
+        margin: calc(var(--index) * 2) 0; 
+    }
+    &__btns{
+        button{
+            width: 49%;
+            border-radius: 25px;
+            font-size: calc(var(--index) * 1);
+            font-weight: 700;
+            line-height: 120%;
+            padding: calc(var(--index) * .3) 0;
+            transition: .3s;
+        }
+    }
+    .greyBtn{
+        background-color: var(--color-grey);
+        border: 2px solid var(--color-grey);
+    }
+    .greyBtn:hover{
+        background-color: transparent;
+    }
+    .greenBtn{
+        background-color: var(--color-g);
+        color: var(--color-w);
+        border: 2px solid var(--color-g);
+    }
+    .greenBtn:hover{
+        background-color: transparent;
+        color: var(--color-g);
+    }
+    &__order{
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__description{
+            background-color: var(--color-g);
+            border-radius: 25px;
+            box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+            padding: calc(var(--index) * 1) calc(var(--index) * 2) calc(var(--index) * 2) calc(var(--index) * 2);
+            color: var(--color-w);
+            font-size: calc(var(--index) * .7);
+            text-align: justify;
+            margin-bottom: calc(var(--index) * 1.5);
+            &__wrapper{
+                @include f-center-between();
+                width: 80%;
+                margin-bottom: calc(var(--index) * .5);
+                h5{
+                    font-size: calc(var(--index) * 1.1);
+                }
+                h6{
+                    font-size: calc(var(--index) * .7);
+                }
+            }
+        }
+        &__prices{
+            width: 100%;
+        }
+        &__price{
+            @include f-center-between();
+            font-size: calc(var(--index) * .7);
+            font-weight: 400;
+            line-height: 170%;
+            &__day{
+                width: 50%;
+            }
+            &__sale,&__count{
+                width: 25%;
+            }
+            &__sale{
+                text-align: center;
+            }
+            &__count{
+                text-align: right;
+            }
+        }
+        &__btn{
+            margin: calc(var(--index) * 1.5) auto;
+            width: 60%;
+        }
+    }
+    &__calendar{
+        width: 60%;
+        &__btns{
+            width: 100%;
+            text-transform: uppercase;
+            padding: calc(var(--index) * .4) calc(var(--index) * 1.5);
+            border-radius: 30px;
+            box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+            margin-bottom: calc(var(--index) * 1);
+            @include f-center-between();
+            button{
+                font-size: calc(var(--index) * 1.3);
+            }
+        }
+        &__list{
+            border-radius: 30px;
+            box-shadow: 0px 0px 40px 0px rgba(86, 86, 86, 0.3);
+            padding: calc(var(--index) * 1) calc(var(--index) * 1.5);
+            &__item{
+                @include f-center-between();
+                margin-bottom: calc(var(--index) * 1);
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*Для айтема отдельные стили так удобней*/
+
+.item{
+    &__time{
+        width: 25%;
+        h5{
+            font-size: calc(var(--index) * .9);
+            font-weight: 700;
+        }
+        h6{
+            font-size: calc(var(--index) * .7);
+            font-weight: 400;   
+        }
+    }
+    &__compound{
+        width: 60%;
+        font-size: calc(var(--index) * .7);
+        font-weight: 400;
+    }
+    &__weight{
+        width: 10%;
+        font-size: calc(var(--index) * .7);
+        font-weight: 400;
+    }
+}
+
+.plan{
+    text-align: center;
+    h5{
+        font-size: calc(var(--index) * .9);
+        line-height: 140%;
+        text-transform: uppercase;
+    }
+    &__ccal{
+        font-size: calc(var(--index) * .6);
+        line-height: 140%;
+    }
+}
+
+.plan.active{
+    color: var(--color-g);
+}
+
+@media(width<=768px){
+    .slide{
+        padding: 0 calc(var(--index) * 1) 0 calc(var(--index) * 3);
+    }
+}

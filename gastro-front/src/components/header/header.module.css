@@ -68,3 +68,18 @@
     border-radius: 25px;
     padding: calc(var(--index) * .4) 0;
 }
+
+@media(width <= 768px){
+    .header{
+        width: 90vw;
+    }
+}
+
+@media (width <= 320px) {
+    .header__menu{
+        display: none;
+    }
+    .heade__phone{
+        display: none;
+    }
+}

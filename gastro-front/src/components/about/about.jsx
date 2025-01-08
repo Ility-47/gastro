@@ -66,6 +66,15 @@ const AccordeonsBLock = () =>{
   )
 }
 
+export const AccordeonForm = () => {
+  return (
+    <section className={s.formAccordeon}>
+      <OrderForm />
+      <AccordeonsBLock />
+    </section>
+  )
+}
+
 const About = () => {
   return (
     <>
@@ -145,10 +154,7 @@ const About = () => {
         <img src="./about__food.png" alt="" />
       </section>
       <SectionSlider />
-      <section className={s.formAccordeon}>
-        <OrderForm />
-        <AccordeonsBLock />
-      </section>
+      <AccordeonForm />
     </>
   )
 }
